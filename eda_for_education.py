@@ -18,6 +18,9 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 
 df = st.file_uploader('Upload a CSV')
 
+
+st.title('Month vs. Hour Heatmap')
+st.title('Dataframe')
 st.dataframe(df)
 st.markdown(download_csv('Heatmap Dataframe',pd.DataFrame(df)),unsafe_allow_html=True)
 
