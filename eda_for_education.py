@@ -25,6 +25,4 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 
 df = st.file_uploader('Upload a CSV')
 
-df_corr = hitMap(df,20,0.95,0.15)
-f,ax = plt. subplots(figsize = (10,10))
-sns.heatmap(df_corr, annot = False,cmap= 'coolwarm' )
+sns.heatmap(df, annot = False,cmap= 'coolwarm' )
