@@ -19,9 +19,14 @@ df = st.file_uploader('Upload a CSV')
 def hitMap(df,nc,l,d):
     ax = sns.heatmap(df.corr(),cmap=sns.cubehelix_palette(nc,light=l,dark=d))
     ax.xaxis.tick_top()
-    
     return df.corr()
-  
+def mapColName_Int(df):
+    for i in range(df.shape[1]):
+       df = df.rename(columns={df.iloc[:,i].name:i+1})
+    return df
+
+df_copy = mapColName_Int(df)
+
 df_corr = hitMap(df_copy,20,0.95,0.15)
 
 st.write(df_corr)
