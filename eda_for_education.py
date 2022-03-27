@@ -1,5 +1,4 @@
 import streamlit as st
 
-st.button('Wish Good morning')
+st.file_uploader('Upload a CSV')
 
-   
