@@ -4,7 +4,7 @@ import sweetviz as sv
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-%matplotlib inline
+
 #mapoutline
 
 
