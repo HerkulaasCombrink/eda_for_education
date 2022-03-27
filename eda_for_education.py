@@ -11,7 +11,7 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 #loading the first part of the data
 
 df = st.file_uploader('Upload a CSV')
-df.head()
+
 summary = edacsv.describe()
 summary = summary.transpose()
 summary
