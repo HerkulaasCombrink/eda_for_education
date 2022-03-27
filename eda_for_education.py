@@ -18,7 +18,7 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 
 df = st.file_uploader('Upload a CSV')
 
-
+st.dataframe(df)
 
 
 #sweet_report = sv.analyze(df)
