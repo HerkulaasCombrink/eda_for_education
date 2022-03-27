@@ -19,9 +19,3 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 
 df = st.file_uploader('Upload a CSV')
 
-df.isnull().sum()
-missing_count = df.isnull().sum()
-value_count = df.isnull().count()
-missing_percentage = round(missing_count/value_count * 100, 2)
-missing_df = pd.DataFrame({'count':missing_count,'percentage':missing_percentage})
-print(missing_df)
