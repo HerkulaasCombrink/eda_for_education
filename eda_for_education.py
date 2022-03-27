@@ -8,13 +8,7 @@ import seaborn as sns
 #mapoutline
 
 
-#Plotting the heatmap
-def hitMap(df,nc,l,d):
-    ax = sns.heatmap(df.corr(),cmap=sns.cubehelix_palette(nc,light=l,dark=d))
-    ax.xaxis.tick_top()
-    
-    return df.corr()
-  
+
 #initial instructions
 st.markdown('**Welcome to the exploratory data analysis application.**')
 st.markdown('_Built into this application is a pipeline that can be applied to your context_')
