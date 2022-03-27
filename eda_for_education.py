@@ -19,3 +19,6 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 
 df = st.file_uploader('Upload a CSV')
 
+sweet_report = sv.analyze(df)
+sweet_report.show_html('sweetviz_report.html')
+
