@@ -13,27 +13,12 @@ st.markdown('_Built into this application is a pipeline that can be applied to y
 st.markdown('**Start by loading a CSV file into the App. Please ensure that you upload a CSV file, with one sheet. If you have multiple spreadsheets, consolidate them into one**')
 
 st.markdown('_If you are unsure how to do this, please go to the following link https://www.computerhope.com/issues/ch001356.htm_')
-def hitMap(df,nc,l,d):
-    ax = sns.heatmap(df.corr(),cmap=sns.cubehelix_palette(nc,light=l,dark=d))
-    ax.xaxis.tick_top()
-    return df.corr()
-def mapColName_Int(df):
-    for i in range(df.shape[1]):
-       df = df.rename(columns={df.iloc[:,i].name:i+1})
-    return df
 
 #loading the first part of the data
 
 df = st.file_uploader('Upload a CSV')
 
-df_copy = mapColName_Int(df)
 
-df_corr = hitMap(df_copy,20,0.95,0.15)
-
-st.write(df_corr)
-
-fig, ax = plt.subplots()
-sns.heatmap(df.corr(), ax=ax)
 
 
 #sweet_report = sv.analyze(df)
