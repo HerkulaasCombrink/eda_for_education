@@ -16,11 +16,19 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 #loading the first part of the data
 
 df = st.file_uploader('Upload a CSV')
+def hitMap(df,nc,l,d):
+    ax = sns.heatmap(df.corr(),cmap=sns.cubehelix_palette(nc,light=l,dark=d))
+    ax.xaxis.tick_top()
+    
+    return df.corr()
+  
+df_corr = hitMap(df_copy,20,0.95,0.15)
 
+st.write(df_corr)
 
 fig, ax = plt.subplots()
 sns.heatmap(df.corr(), ax=ax)
-st.write(fig)
+
 
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
