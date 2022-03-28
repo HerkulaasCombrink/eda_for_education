@@ -127,7 +127,7 @@ df_report = df_sorted.head(rank)
 df_report.columns = ['Combinations','Values']
 
 #Set indices base on a rank value
-indx = np.array(range(1,rank))
+indx = np.array(range(1,rank+1))
 df_report = df_report.set_index(indx)
 
 #making the correlation coefficient table
