@@ -18,7 +18,7 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 
 #loading the first part of the data
 
-#df = st.file_uploader('Upload a CSV')
+#df = st.file_uploader('Upload a CSV') 
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
