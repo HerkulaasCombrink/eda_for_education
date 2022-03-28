@@ -144,6 +144,7 @@ st.write(df_report)
 
 analysis = sv.analyze(df)
 analysis.show_notebook()
-#analysis.show_html(analysis, unsafe_allow_html=True)
-#st.markdown(analysis, unsafe_allow_html=True)
+
+analysis.show_notebook(w=1500, h=300, scale=0.8)
+analysis.show_html(scale=0.9
 
