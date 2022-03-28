@@ -142,5 +142,5 @@ st.markdown('***In the table before, the three variable pairs with the highest c
 st.write(df_report)
 
 analysis = sv.analyze(df)
-analysis.show_html(open_browser=False, layout='vertical', scale=1.0)
-components.iframe(width=1100, height=1200, scrolling=True)
+analysis.show_html(open_browser=True)
+components.iframe()
