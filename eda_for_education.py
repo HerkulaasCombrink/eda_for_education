@@ -148,8 +148,8 @@ def st_display_sweetviz(report_html, width = 1000, height = 500):
   page = report_file.read()
   components.html(page, width=width, height=height,scrolling = True)
 
-#if st.button("Generate Sweetviz report"):
-report = sv.analyze(df)
-report.show_html()
-#  st_display_sweetviz("SWEETVIZ_REPORT.html")
+if st.button("Generate Sweetviz report"):
+  report = sv.analyze(df)
+  report.show_html()
+  st_display_sweetviz("SWEETVIZ_REPORT.html")
   
