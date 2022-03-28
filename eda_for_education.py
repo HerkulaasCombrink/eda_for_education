@@ -143,6 +143,7 @@ st.markdown('***In the table before, the three variable pairs with the highest c
 st.write(df_report)
 
 analysis = sv.analyze(df)
+analysis.iframe()
 analysis.show_notebook()
 
 analysis.show_notebook(w=1500, h=300, scale=0.8)
