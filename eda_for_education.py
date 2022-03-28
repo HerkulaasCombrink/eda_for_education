@@ -113,7 +113,7 @@ df_sorted = df_combValue.T.sort_values(by=1,ascending=False)
 rank = getRank(df_copy)
 
 #Define the report dataframe given the rank
-#df_report = df_sorted.head(rank)
+df_report = df_sorted.head(rank)
 
 #Define the df_report columns
 df_report.columns = ['Combinations','Values']
