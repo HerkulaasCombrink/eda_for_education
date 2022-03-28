@@ -23,10 +23,6 @@ df = pd.DataFrame(
 
 st.table(df)
 
-st.title('Month vs. Hour Heatmap')
-st.title('Dataframe')
-st.table(df)
-st.markdown(download_csv('Heatmap Dataframe',pd.DataFrame(df)),unsafe_allow_html=True)
 
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
