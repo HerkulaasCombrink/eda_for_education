@@ -52,6 +52,8 @@ def mapColName_Int(df):
     return df
 #Call on previous algorithm
 df_copy = mapColName_Int(df)
+
+st.markdown('**Insert Heatmap Here**')
 df_corr = hitMap(df_copy,20,0.95,0.15)
  
 #sweet_report = sv.analyze(df)
