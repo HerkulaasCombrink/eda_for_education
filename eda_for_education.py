@@ -127,6 +127,6 @@ st.markdown('***For an exploratory data analysis to be successful, you would nee
 st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
 st.write(df_report)
 
-analysis = sv.analyze([df,'EDA'], feat_cfg=sv.FeatureConfig(force_text=[]), target_feat=None)
-analysis.show_html(filepath='./frontend/public/EDA.html', open_browser=True, layout='vertical', scale=1.0)
-components.iframe(src='http://localhost:3001/EDA.html', width=1100, height=1200, scrolling=True)
+analysis = sv.analyze(df)
+analysis.show_html()
+
