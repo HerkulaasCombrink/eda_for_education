@@ -16,9 +16,9 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 
 #loading the first part of the data
 
-df = st.file_uploader('Upload a CSV')
-df2 = pd.DataFrame(
-    np.df,
+#df = st.file_uploader('Upload a CSV')
+df = pd.DataFrame(
+    st.file_uploader('Upload a CSV'),
     columns=('col %d' % i for i in range(5)))
 
 st.table(df)
