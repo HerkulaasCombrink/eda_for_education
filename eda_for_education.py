@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 import seaborn as sns
 from IPython.display import IFrame
 import codecs
-
+st.set_page_config(layout="wide")
 #mapoutline
 
 #initial instructions
