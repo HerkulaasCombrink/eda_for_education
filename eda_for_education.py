@@ -70,6 +70,9 @@ value_count = df.isnull().count()
 missing_percentage = round(missing_count/value_count * 100, 2)
 missing_df = pd.DataFrame({'count':missing_count,'percentage':missing_percentage})
 
+st.markdown('**Missing data within the variables**')
+st.markdown('***Some analysis may require a knowldge of wheather or not there are missing data points for each of the variables in the dataset.***')
+st.markdown('***To find out more about missing values and the impact of missing values, please visit this link https://www.statisticssolutions.com/dissertation-resources/missing-values-in-data/ .***')
 st.write(missing_df)
 
 #sweet_report = sv.analyze(df)
