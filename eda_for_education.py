@@ -53,7 +53,7 @@ def mapColName_Int(df):
 #Call on previous algorithm
 df_copy = mapColName_Int(df)
 
-st.markdown('**Insert Heatmap Here**')
+st.markdown('***Variable correlation Heatmap***')
 df_corr = hitMap(df_copy,20,0.95,0.15)
 fig, ax = plt.subplots()
 sns.heatmap(df_corr.corr(), ax=ax)
