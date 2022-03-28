@@ -79,7 +79,8 @@ barchart = missing_df.plot.bar(y = 'percentage')
 
 for index, percentage in enumerate(missing_percentage):
     barchart.text(index,percentage,str(percentage)+'%')
-    
+
+st.write(barchart)
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
 
