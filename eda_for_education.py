@@ -22,7 +22,16 @@ if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
   st.write(df)
 
+#making the heatmap
 
+%matplotlib inline
+
+#Plotting the heatmap
+def hitMap(df,nc,l,d):
+    ax = sns.heatmap(df.corr(),cmap=sns.cubehelix_palette(nc,light=l,dark=d))
+    ax.xaxis.tick_top()
+    
+    return df.corr()
 
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
