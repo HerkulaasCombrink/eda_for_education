@@ -124,7 +124,8 @@ df_report = df_report.set_index(indx)
 
 st.write(df_report)
 
-  
-sweet_report = sv.analyze(df)
+     analysis = sv.analyze([df,'EDA'], feat_cfg=sv.FeatureConfig(
+        skip=skip_columns_time_series,
+        force_text=[]), target_feat=None)
 Sweet_report.show_html(filepath='./frontend/public/EDA.html', open_browser=False, layout='vertical', scale=1.0)
 components.iframe(src='http://localhost:3001/EDA.html', width=1100, height=1200, scrolling=True)
