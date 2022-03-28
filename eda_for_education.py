@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 import seaborn as sns
 from IPython.display import IFrame
+import codecs
 
 #mapoutline
 
