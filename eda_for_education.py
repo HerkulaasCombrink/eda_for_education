@@ -88,8 +88,8 @@ def tdlist(rows,cols):
             col.append(0)
         lst_combValue.append(col)
     return lst_combValue
-  lst_comb_values = tdlist(2,5)
 
+lst_comb_values = tdlist(2,5)
 lst_comb_values[0][0:len(values)] = combination# Assigning the first row to array of combinations
 lst_comb_values[1][0:len(values)] = values# Assigning the second row to array of values
 
