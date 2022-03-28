@@ -75,12 +75,56 @@ st.markdown('***Some analysis may require a knowldge of wheather or not there ar
 st.markdown('***To find out more about missing values and the impact of missing values, please visit this link https://www.statisticssolutions.com/dissertation-resources/missing-values-in-data/ .***')
 st.write(missing_df)
 
-fig2,ax = missing_df.plot.bar(y = 'percentage')
+#Identifying the highest correlation coefficient and converting the vectors into a single array
+values,combination = traverse_df(df_corr)
+values = np.asarray(values)
+values[0:5]
+combination[0:5]
+def tdlist(rows,cols):
+    lst_combValue = []
+    for j in range(rows):
+        col = []
+        for i in range(cols):
+            col.append(0)
+        lst_combValue.append(col)
+    return lst_combValue
+  lst_comb_values = tdlist(2,5)
 
-for index, percentage in enumerate(missing_percentage):
-    barchart.text(index,percentage,str(percentage)+'%')
+lst_comb_values[0][0:len(values)] = combination# Assigning the first row to array of combinations
+lst_comb_values[1][0:len(values)] = values# Assigning the second row to array of values
 
-st.write(fig2)
+df_combValue = pd.DataFrame(lst_comb_values)# Converting the 2-D list into a dataframe
+#Get rank with regard number of rows
+def getRank(df): 
+    rank = 0
+    cn = df.shape[1]
+    if cn <=3:
+        rank = cn
+    if 3<cn<=10:
+        rank = 4
+    if 10<cn<=15:
+        rank = 5
+    if cn>20:
+        rank = 6
+    return rank     
+df_sorted = df_combValue.T.sort_values(by=1,ascending=False)
+
+#row_rep = getRank(df_copy)
+rank = getRank(df_copy)
+
+#Define the report dataframe given the rank
+df_report = df_sorted.head(rank)
+
+#Define the df_report columns
+df_report.columns = ['Combinations','Values']
+
+#Set indices base on a rank value
+indx = np.array(range(1,rank+1))
+df_report = df_report.set_index(indx)
+
+st.write(df_report)
+
+  
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
 
