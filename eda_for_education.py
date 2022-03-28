@@ -55,7 +55,7 @@ df_copy = mapColName_Int(df)
 
 st.markdown('**Insert Heatmap Here**')
 df_corr = hitMap(df_copy,20,0.95,0.15)
- 
+st.write(df_corr)
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
 
