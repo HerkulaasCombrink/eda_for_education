@@ -17,7 +17,11 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 #loading the first part of the data
 
 df = st.file_uploader('Upload a CSV')
+df = pd.DataFrame(
+    np.random.randn(10, 5),
+    columns=('col %d' % i for i in range(5)))
 
+st.table(df)
 
 st.title('Month vs. Hour Heatmap')
 st.title('Dataframe')
