@@ -130,6 +130,7 @@ df_report.columns = ['Combinations','Values']
 indx = np.array(range(1,rank+1))
 df_report = df_report.set_index(indx)
 
+st.write(df_corr)
 st.markdown('**Ranking the top three combinations of variables**')
 st.markdown('***For an exploratory data analysis to be successful, you would need to start investigating the highest impact variables first.***')
 st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
