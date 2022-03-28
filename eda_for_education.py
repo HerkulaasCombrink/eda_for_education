@@ -88,14 +88,14 @@ def tdlist(rows,cols):
             col.append(0)
         lst_combValue.append(col)
     return lst_combValue
-
+st.markdown('**rak**')
 lst_comb_values = tdlist(2,10)
 lst_comb_values[0][0:len(values)] = combination# Assigning the first row to array of combinations
 lst_comb_values[1][0:len(values)] = values# Assigning the second row to array of values
 
 df_combValue = pd.DataFrame(lst_comb_values)# Converting the 2-D list into a dataframe
 #Get rank with regard number of rows
-st.markdown('**rak**')
+
 def getRank(df): 
     rank = 0
     cn = df.shape[1]
