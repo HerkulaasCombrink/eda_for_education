@@ -135,24 +135,5 @@ st.markdown('***For an exploratory data analysis to be successful, you would nee
 st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
 st.write(df_report)
 
-##analysis = sv.analyze(df)
-#analysis.show_html()
-def app(title=None):
-
-    st.title(title)
-   # df = pd.read_csv('./data/Time_Series.csv')
-   # st.write(df.head())
-
-  #  skip_columns_years = [str(y) for y in range(2016, 2026)]
-  #  skip_columns_time_series = ['Date of last update', 'Databank code', 'Scenario', 'Location code', 'Indicator code'] + skip_columns_years
-
-    # Use the analysis function from sweetviz module to create a 'DataframeReport' object.
-    analysis = sv.analyze([df,'EDA'], feat_cfg=sv.FeatureConfig(
-        skip=None,
-        force_text=[]), target_feat=None)
-
-    # Render the output on a web page.
-    analysis.show_html(filepath='./frontend/public/EDA.html', open_browser=False, layout='vertical', scale=1.0)
-    components.iframe(src='http://localhost:3001/EDA.html', width=1100, height=1200, scrolling=True)
-
-app(title='Sweet Visualization')
+analysis = sv.analyze(df)
+analysis.show_html()
