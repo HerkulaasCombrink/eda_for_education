@@ -21,7 +21,7 @@ df = st.file_uploader('Upload a CSV')
 
 st.title('Month vs. Hour Heatmap')
 st.title('Dataframe')
-st.dataframe(df)
+st.table(df)
 st.markdown(download_csv('Heatmap Dataframe',pd.DataFrame(df)),unsafe_allow_html=True)
 
 #sweet_report = sv.analyze(df)
