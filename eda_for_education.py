@@ -3,6 +3,7 @@ import pandas as pd
 import sweetviz as sv
 import numpy as np
 import matplotlib.pyplot as plt
+import streamlit.components.v1 as components
 import seaborn as sns
 
 #mapoutline
