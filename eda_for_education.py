@@ -95,6 +95,7 @@ lst_comb_values[1][0:len(values)] = values# Assigning the second row to array of
 
 df_combValue = pd.DataFrame(lst_comb_values)# Converting the 2-D list into a dataframe
 #Get rank with regard number of rows
+st.markdown('**rak**')
 def getRank(df): 
     rank = 0
     cn = df.shape[1]
