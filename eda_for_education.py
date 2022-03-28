@@ -44,7 +44,16 @@ def traverse_df(df):
                 #lst_value[k] = df.iat[i,j]
                 #k +=1 
     return lst_value,lst_combination
-  
+
+#Substitute column names with integers 
+def mapColName_Int(df):
+    for i in range(df.shape[1]):
+       df = df.rename(columns={df.iloc[:,i].name:i+1})
+    return df
+#Call on previous algorithm
+df_copy = mapColName_Int(df)
+df_corr = hitMap(df_copy,20,0.95,0.15)
+ 
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
 
