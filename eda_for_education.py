@@ -125,6 +125,6 @@ df_report = df_report.set_index(indx)
 st.write(df_report)
 
   
-#sweet_report = sv.analyze(df)
-#Sweet_report.show_html('sweetviz_report.html')
+sweet_report = sv.analyze(df)
+Sweet_report.show_html('sweetviz_report.html')
 
