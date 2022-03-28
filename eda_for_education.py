@@ -146,5 +146,5 @@ analysis = sv.analyze(df)
 #analysis.show_html(analysis, unsafe_allow_html=True)
 #st.markdown(analysis, unsafe_allow_html=True)
 
-analysis.show_html()
-components.iframe()
+analysis.show_html(analysis)
+components.iframe(analysis)
