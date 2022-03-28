@@ -29,9 +29,22 @@ if uploaded_file is not None:
 def hitMap(df,nc,l,d):
     ax = sns.heatmap(df.corr(),cmap=sns.cubehelix_palette(nc,light=l,dark=d))
     ax.xaxis.tick_top()
-    
     return df.corr()
-
+def traverse_df(df):
+    a,b=df.shape
+    #lst_value = np.zeros(a*b)
+    lst_value = []
+    lst_combination = []
+    k = 0;
+    for i in range(0,a):
+        for j in range(0,b):
+            if i!=j:
+                lst_combination.append((i+1,j+1))
+                lst_value.append(df.iat[i,j])
+                #lst_value[k] = df.iat[i,j]
+                #k +=1 
+    return lst_value,lst_combination
+  
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
 
