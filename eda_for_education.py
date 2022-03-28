@@ -19,7 +19,7 @@ st.markdown('_If you are unsure how to do this, please go to the following link 
 #df = st.file_uploader('Upload a CSV')
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
-  df = pd.read_csv(uploaded_file)
+  df = pd.read_csv(uploaded_file).T
   st.write(df)
 
   
@@ -132,7 +132,7 @@ df_report = df_report.set_index(indx)
 st.markdown('**Ranking the top three combinations of variables**')
 st.markdown('***For an exploratory data analysis to be successful, you would need to start investigating the highest impact variables first.***')
 st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
-st.write(df_report).T
+st.write(df_report)
 
 #analysis = sv.analyze(df)
 #analysis.show_html()
