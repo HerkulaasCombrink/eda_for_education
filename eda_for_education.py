@@ -87,7 +87,7 @@ def tdlist(rows,cols):
         for i in range(cols):
             col.append(0)
         lst_combValue.append(col)
-   # return lst_combValue
+    return lst_combValue
 
 lst_comb_values = tdlist(2,5)
 lst_comb_values[0][0:len(values)] = combination# Assigning the first row to array of combinations
@@ -107,7 +107,7 @@ def getRank(df):
     if cn>20:
         rank = 6
     return rank     
-df_sorted = df_combValue.T.sort_values(by=1,ascending=False)
+#df_sorted = df_combValue.T.sort_values(by=1,ascending=False)
 
 #row_rep = getRank(df_copy)
 rank = getRank(df_copy)
