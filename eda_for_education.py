@@ -134,6 +134,6 @@ st.markdown('***For an exploratory data analysis to be successful, you would nee
 st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
 st.write(df_report)
 
-#analysis = sv.analyze(df)
+##analysis = sv.analyze(df)
 #analysis.show_html()
 
