@@ -126,5 +126,5 @@ st.write(df_report)
 
   
 sweet_report = sv.analyze(df)
-Sweet_report.show_html('sweetviz_report.html')
-
+Sweet_report.show_html(filepath='./frontend/public/EDA.html', open_browser=False, layout='vertical', scale=1.0)
+components.iframe(src='http://localhost:3001/EDA.html', width=1100, height=1200, scrolling=True)
