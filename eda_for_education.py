@@ -22,6 +22,13 @@ if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
   st.write(df)
 
+  
+st.markdown('**Let us assess the discriptive analysis on the variables within the dataset**')
+st.markdown('***Every dataset has a distribution of data within it that can be described using a variety of measurements.***')
+st.markdown('***If any of the variable summaries in the table below are unclear, please read up using this link https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/2-mean-and-standard-deviation.***')
+summary = df.describe()
+summary = summary.transpose()
+st.write(summary)
 #making the heatmap
 
 
@@ -130,7 +137,3 @@ st.write(df_report)
 #analysis = sv.analyze(df)
 #analysis.show_html()
 
-st.markdown('**Let us assess the discriptive analysis on the variables within the dataset**')
-summary = df.describe()
-summary = summary.transpose()
-st.write(summary)
