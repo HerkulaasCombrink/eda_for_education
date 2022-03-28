@@ -143,4 +143,4 @@ st.write(df_report)
 
 analysis = sv.analyze(df)
 analysis.show_html()
-st.write(analysis)
+components.iframe(src='http://localhost:3001/EDA.html', width=1100, height=1200, scrolling=True)
