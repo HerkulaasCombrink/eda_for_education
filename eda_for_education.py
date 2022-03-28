@@ -24,7 +24,6 @@ if uploaded_file is not None:
 
 #making the heatmap
 
-%matplotlib inline
 
 #Plotting the heatmap
 def hitMap(df,nc,l,d):
