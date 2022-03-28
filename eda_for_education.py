@@ -143,4 +143,4 @@ st.write(df_report)
 
 analysis = sv.analyze(df)
 analysis.show_html()
-st.write(analysis)
+st.markdown(analysis, unsafe_allow_html=True)
