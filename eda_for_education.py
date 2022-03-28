@@ -58,7 +58,7 @@ st.markdown('***The variable correlation Heatmap is a tool to assist in identify
 st.markdown('***To find out more about Heatmaps, please visit this link https://www.jmp.com/en_ch/statistics-knowledge-portal/exploratory-data-analysis/heatmap.html .***')
 df_corr = hitMap(df_copy,20,0.95,0.15)
 fig, ax = plt.subplots()
-sns.heatmap(df_corr.corr(), ax=ax)
+sns.heatmap(df_corr.corr(), ax=ax,cmap= 'coolwarm')
 st.write(fig)
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
