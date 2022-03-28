@@ -70,6 +70,7 @@ value_count = df.isnull().count()
 missing_percentage = round(missing_count/value_count * 100, 2)
 missing_df = pd.DataFrame({'count':missing_count,'percentage':missing_percentage})
 
+ st.write(missing_df)
 
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
