@@ -78,8 +78,6 @@ st.write(missing_df)
 #Identifying the highest correlation coefficient and converting the vectors into a single array
 values,combination = traverse_df(df_corr)
 values = np.asarray(values)
-#values[0:10]
-#combination[0:10]
 
 def tdlist(rows,cols):
     lst_combValue = []
@@ -124,6 +122,9 @@ df_report.columns = ['Combinations','Values']
 indx = np.array(range(1,rank+1))
 df_report = df_report.set_index(indx)
 
+st.markdown('**Ranking the top three combinations of variables**')
+st.markdown('***For an exploratory data analysis to be successful, you would need to start investigating the highest impact variables first.***')
+st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
 st.write(df_report)
 
 analysis = sv.analyze([df,'EDA'], feat_cfg=sv.FeatureConfig(force_text=[]), target_feat=None)
