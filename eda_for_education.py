@@ -75,12 +75,12 @@ st.markdown('***Some analysis may require a knowldge of wheather or not there ar
 st.markdown('***To find out more about missing values and the impact of missing values, please visit this link https://www.statisticssolutions.com/dissertation-resources/missing-values-in-data/ .***')
 st.write(missing_df)
 
-barchart = missing_df.plot.bar(y = 'percentage')
+fig2,ax = missing_df.plot.bar(y = 'percentage')
 
 for index, percentage in enumerate(missing_percentage):
     barchart.text(index,percentage,str(percentage)+'%')
 
-st.write(missing_df)
+st.write(fig2)
 #sweet_report = sv.analyze(df)
 #Sweet_report.show_html('sweetviz_report.html')
 
