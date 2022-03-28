@@ -78,9 +78,9 @@ st.write(missing_df)
 #Identifying the highest correlation coefficient and converting the vectors into a single array
 values,combination = traverse_df(df_corr)
 values = np.asarray(values)
-values[0:10]
-combination[0:10]
-st.markdown('**rak**')
+#values[0:10]
+#combination[0:10]
+
 def tdlist(rows,cols):
     lst_combValue = []
     for j in range(rows):
