@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 import seaborn as sns
+from IPython.display import IFrame
 
 #mapoutline
 
@@ -141,6 +142,9 @@ st.markdown('***For an exploratory data analysis to be successful, you would nee
 st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
 st.write(df_report)
 
-analysis = sv.analyze(df)
-analysis.show_html(analysis, unsafe_allow_html=True)
-st.markdown(analysis, unsafe_allow_html=True)
+#analysis = sv.analyze(df)
+#analysis.show_html(analysis, unsafe_allow_html=True)
+#st.markdown(analysis, unsafe_allow_html=True)
+
+analysis.show_html(filepath='./frontend/public/EDA.html', open_browser=False, layout='vertical', scale=1.0)
+components.iframe(src='http://localhost:3001/EDA.html', width=1100, height=1200, scrolling=True)
