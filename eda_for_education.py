@@ -142,10 +142,16 @@ st.markdown('***For an exploratory data analysis to be successful, you would nee
 st.markdown('***In the table before, the three variable pairs with the highest correlation coefficient will be illustrated (combination = variable number; values = correlation coefficient)***')
 st.write(df_report)
 
+def st_display_sweetviz(report_html,width=1000,height=500):
+	report_file = codecs.open(report_html,'r')
+	page = report_file.read()
+	components.html(page,width=width,height=height,scrolling=True)
+  
 analysis = sv.analyze(df)
-analysis.iframe()
+
 analysis.show_notebook()
 
 analysis.show_notebook(w=1500, h=300, scale=0.8)
 analysis.show_html(scale=0.9)
+st_display_sweetviz("SWEETVIZ_REPORT.html")
 
