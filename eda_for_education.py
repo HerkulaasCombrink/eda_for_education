@@ -146,5 +146,5 @@ analysis = sv.analyze(df)
 analysis.show_notebook()
 
 analysis.show_notebook(w=1500, h=300, scale=0.8)
-analysis.show_html(scale=0.9
+analysis.show_html(scale=0.9)
 
