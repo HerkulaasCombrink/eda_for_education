@@ -107,13 +107,13 @@ def getRank(df):
     if cn>20:
         rank = 6
     return rank     
-#df_sorted = df_combValue.T.sort_values(by=1,ascending=False)
+df_sorted = df_combValue.T.sort_values(by=1,ascending=False)
 
 #row_rep = getRank(df_copy)
 rank = getRank(df_copy)
 
 #Define the report dataframe given the rank
-df_report = df_sorted.head(rank)
+#df_report = df_sorted.head(rank)
 
 #Define the df_report columns
 df_report.columns = ['Combinations','Values']
