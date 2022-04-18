@@ -16,6 +16,7 @@ st.markdown('_Built into this application is a pipeline that can be applied to y
 st.markdown('**Start by loading a CSV file into the App. Please ensure that you upload a CSV file, with one sheet. If you have multiple spreadsheets, consolidate them into one**')
 
 st.markdown('_If you are unsure how to do this, please go to the following link https://www.computerhope.com/issues/ch001356.htm_')
+st.markdown('_To navigate back to the main Repo, please use this link https://github.com/dsfsi/Higher_Education_EDA_')
 
 #loading the first part of the data
 
