@@ -18,7 +18,13 @@ st.markdown('**Start by loading a CSV file into the App. Please ensure that you 
 
 st.markdown('_If you are unsure how to do this, please go to the following link https://www.computerhope.com/issues/ch001356.htm_')
 st.markdown('_To navigate back to the main Repo, please use this link https://github.com/dsfsi/Higher_Education_EDA_')
-
+st.selectbox('Select', [1,2,3])
+st.multiselect('Multiselect', [1,2,3])
+st.slider('Slide me', min_value=0, max_value=10)
+st.select_slider('Slide to select', options=[1,'2'])
+st.text_input('Enter some text')
+st.number_input('Enter a number')
+st.text_area('Area for textual entry')
 #loading the first part of the data
 
 # df = st.file_uploader('Upload a CSV') 
