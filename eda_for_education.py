@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 #import sweetviz as sv
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
-import seaborn as sns
-from IPython.display import IFrame
-import codecs
+#import seaborn as sns
+#from IPython.display import IFrame
+#import codecs
 
 #mapoutline
 
