@@ -84,7 +84,7 @@ st.markdown('***To find out more about Heatmaps, please visit this link https://
 st.markdown('**Missing data within the variables**')
 st.markdown('***Some analysis may require a knowldge of wheather or not there are missing data points for each of the variables in the dataset.***')
 st.markdown('***To find out more about missing values and the impact of missing values, please visit this link https://www.statisticssolutions.com/dissertation-resources/missing-values-in-data/ .***')
-st.write(missing_df)
+#st.write(missing_df)
 
 #Identifying the highest correlation coefficient and converting the vectors into a single array
 #values,combination = traverse_df(df_corr)
