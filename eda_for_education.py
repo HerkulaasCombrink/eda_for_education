@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 #mapoutline
 
 #initial instructions
-st.markdown('**Welcome to the exploratory data analysis application.**')
+st.markdown('**Welcome to the exploratory data analysis application. This is a test**')
 st.button('This is another tesy')
 st.button('Hit me')
 st.markdown('_Built into this application is a pipeline that can be applied to your context_')
