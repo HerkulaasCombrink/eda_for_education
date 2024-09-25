@@ -11,7 +11,8 @@ import streamlit.components.v1 as components
 #mapoutline
 
 #initial instructions
-st.markdown('**Welcome to the exploratory data analysis application Hons students**')
+st.markdown('**Welcome to the exploratory data analysis application.**')
+st.button('This is another tesy')
 st.button('Hit me')
 st.markdown('_Built into this application is a pipeline that can be applied to your context_')
 st.markdown('**Start by loading a CSV file into the App. Please ensure that you upload a CSV file, with one sheet. If you have multiple spreadsheets, consolidate them into one**')
