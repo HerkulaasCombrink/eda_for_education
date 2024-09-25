@@ -11,6 +11,7 @@ import streamlit.components.v1 as components
 #mapoutline
 
 #initial instructions
+st.checkbox('Check me out')
 st.markdown('**Welcome to the exploratory data analysis application. This is a test**')
 st.button('This is another tesy')
 st.button('Hit me')
